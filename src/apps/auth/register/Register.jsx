@@ -3,11 +3,9 @@ import { useForm } from 'react-hook-form';
 import { Components } from './../../../components/index';
 import cls from "../../../assets/styles/register/Register.module.scss";
 import Logo from "../../../assets/images/logo/insta.png";
-import { Link } from 'react-router-dom';
 import { formsValidate } from '../../../helpers/forms';
 import { REQUEST } from '../../../api';
 import { Hooks } from '../../../hooks';
-import { AuthPath } from './../../../services/path';
 
 export default function Register() {
   const { goToLogin } = Hooks.useLocations();
@@ -44,8 +42,9 @@ export default function Register() {
   
   return (
     <Components.Container>
-      <section className={cls.register_page}>
-        <div className={cls.register_page_card}>
+      <section className={cls.register_page} data-aos="zoom-in-right" >
+
+        <div className={cls.register_page_card} >
           <Components.Image src={Logo}/>
 
           <h3>Зарегистрируйтесь, чтобы смотреть фото и видео ваших друзей.</h3>
@@ -132,14 +131,8 @@ export default function Register() {
 
         </div>
 
-        <div className={cls.register_page_bottomCard}>
-          <p>Есть аккаунт?
-            <Link to={AuthPath.login}>
-              Вход
-            </Link>
-          </p>
+        <Components.Forms.AuthNavigate location="register"/>
 
-        </div>
       </section>
     </Components.Container>
   )
