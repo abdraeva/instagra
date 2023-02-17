@@ -1,11 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Components } from './../../../components/index';
-import cls from "../../../assets/styles/register/Register.module.scss";
-import Logo from "../../../assets/images/logo/insta.png";
 import { formsValidate } from '../../../helpers/forms';
 import { REQUEST } from '../../../api';
 import { Hooks } from '../../../hooks';
+
+import cls from "../../../assets/styles/register/Register.module.scss";
+import Logo from "../../../assets/images/logo/insta.png";
+
 
 export default function Register() {
   const { goToLogin } = Hooks.useLocations();
@@ -42,9 +44,9 @@ export default function Register() {
   
   return (
     <Components.Container>
-      <section className={cls.register_page} data-aos="zoom-in-right" >
+      <section className={cls.register_page} >
 
-        <div className={cls.register_page_card} >
+        <div className={cls.register_page_card}  data-aos="zoom-in-right">
           <Components.Image src={Logo}/>
 
           <h3>Зарегистрируйтесь, чтобы смотреть фото и видео ваших друзей.</h3>

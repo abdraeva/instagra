@@ -1,6 +1,6 @@
 import React from "react";
 
-
+// REGISTERPAGES
  const Register = React.lazy(() => import ("../apps/auth/register/Register"));
  const Login = React.lazy(() => import ("../apps/auth/login/Login"));
 
@@ -8,4 +8,13 @@ import React from "react";
 export const AuthPages = {
   Register,
   Login
+};
+
+
+//LAYOUTPAGES
+
+const Home = React.lazy(() => import ("../apps/layout/home/Home"));
+
+export const LayoutPages = {
+  Home
 };
