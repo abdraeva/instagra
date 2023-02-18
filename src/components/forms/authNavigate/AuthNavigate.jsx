@@ -6,7 +6,7 @@ import { AuthPath } from '../../../services/path';
 export default function AuthNavigate({location}) {
   
   return (
-    <div className={cls.auth_page_bottomCard} >
+    <div className={cls.auth_page_bottomCard} data-aos="zoom-in-right" >
       <p>
         {
           location === "login"
@@ -21,7 +21,7 @@ export default function AuthNavigate({location}) {
         }>
           {
             location === "login" 
-            ?  "Зарегистрироваться"
+            ? "Зарегистрироваться"
             : "Вход"
           }
           
